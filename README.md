@@ -9,4 +9,4 @@ To install config run:
 It will create symlinks to config dirs and update .bashrc with aliases and other configurations.
 
 TODO:
- - [ ] make configuratin more modular
+ - [ ] make configuration more modular

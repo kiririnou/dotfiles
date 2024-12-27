@@ -1,0 +1,133 @@
+general.import = [
+    # "~/.config/alacritty/everforest_hard_dark.toml",
+    "~/.config/alacritty/cyberdream.toml"
+]
+general.live_config_reload = true
+
+[env]
+TERM = "xterm-256color"
+WINIT_X11_SCALE_FACTOR = "1"
+
+[window]
+# opacity = 0.9
+# dynamic_padding = true
+decorations = "full"
+dynamic_title = true
+
+[window.dimensions]
+columns = 140
+lines = 36
+
+# uncomment if dynamic_padding is false
+# [window.padding]
+# x = 25
+# y = 20
+
+[colors]
+draw_bold_text_with_bright_colors = true
+transparent_background_colors = true #???
+
+[cursor]
+style = "Block"
+unfocused_hollow = true
+
+[debug]
+log_level = "Warn"
+persistent_logging = false
+print_events = false
+render_timer = false
+
+[font]
+size = 12
+
+[mouse]
+hide_when_typing = true
+
+[[mouse.bindings]]
+action = "PasteSelection"
+mouse = "Middle"
+
+[scrolling]
+history = 10000
+multiplier = 3
+
+[selection]
+save_to_clipboard = false
+semantic_escape_chars = ",│`|:\"' ()[]{}<>\t"
+
+[[keyboard.bindings]]
+action = "Paste"
+key = "V"
+mods = "Control|Shift"
+
+[[keyboard.bindings]]
+action = "Copy"
+key = "C"
+mods = "Control|Shift"
+
+[[keyboard.bindings]]
+action = "PasteSelection"
+key = "Insert"
+mods = "Shift"
+
+[[keyboard.bindings]]
+action = "ResetFontSize"
+key = "Key0"
+mods = "Control"
+
+[[keyboard.bindings]]
+action = "IncreaseFontSize"
+key = "Equals"
+mods = "Control"
+
+[[keyboard.bindings]]
+action = "DecreaseFontSize"
+key = "Minus"
+mods = "Control"
+
+[[keyboard.bindings]]
+action = "ToggleFullscreen"
+key = "Return"
+mods = "Alt"
+
+[[keyboard.bindings]]
+action = "Paste"
+key = "Paste"
+
+[[keyboard.bindings]]
+action = "Copy"
+key = "Copy"
+
+[[keyboard.bindings]]
+action = "ClearLogNotice"
+key = "L"
+mods = "Control"
+
+[[keyboard.bindings]]
+chars = "\f"
+key = "L"
+mods = "Control"
+
+[[keyboard.bindings]]
+action = "ScrollPageUp"
+key = "PageUp"
+mode = "~Alt"
+mods = "Shift"
+
+[[keyboard.bindings]]
+action = "ScrollPageDown"
+key = "PageDown"
+mode = "~Alt"
+mods = "Shift"
+
+[[keyboard.bindings]]
+action = "ScrollToTop"
+key = "Home"
+mode = "~Alt"
+mods = "Shift"
+
+[[keyboard.bindings]]
+action = "ScrollToBottom"
+key = "End"
+mode = "~Alt"
+mods = "Shift"
