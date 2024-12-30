@@ -2,7 +2,9 @@ function SetColor()
     -- TODO: make config function for different themes
     -- e.g. everforest with darker bg, etc.
     -- color = color or "rose-pine"
-    color = color or "everforest"
+    -- color = color or "everforest"
+    color = color or "cyberdream"
+    -- color = color or "fluoromachine"
     vim.cmd.colorscheme(color)
 
     --vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
@@ -43,10 +45,34 @@ return {
                 disable_italic_comments = false,
                 colours_override = function(palette)
                     palette.bg0 = "#1e2326"
+                    -- palette.bg0 = "#000000"
                 end,
             })
-            everforest.load()
-            vim.cmd("colorscheme everforest")
+            -- everforest.load()
+            -- vim.cmd("colorscheme everforest")
+        end
+    },
+
+    {
+        "scottmckendry/cyberdream.nvim",
+        name = "cyberdream",
+        config = function ()
+            require("cyberdream").setup({})
+            SetColor()
+        end
+    },
+
+    {
+        "maxmx03/fluoromachine.nvim",
+        name = "fluoromachine",
+        config = function ()
+            local fm = require("fluoromachine")
+            fm.setup {
+                glow = true,
+                theme = "delta",
+                transparent = false,
+            }
+            -- SetColor()
         end
     },
 }

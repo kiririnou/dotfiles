@@ -1,18 +1,24 @@
 #!/bin/env bash
 
+# set -x
+
 dotfiles_dir=$(pwd)
 
-unlink $HOME/.tmux.conf
-ln -s $dotfiles_dir/tmux/.tmux.conf $HOME/.tmux.conf
+rm $HOME/.tmux.conf
+cp $dotfiles_dir/tmux/.tmux.conf $HOME/.tmux.conf
 
-unlink $HOME/.config/nvim
-ln -s $dotfiles_dir/nvim $HOME/.config/nvim
+rm -fr $HOME/.config/nvim
+cp -r $dotfiles_dir/nvim $HOME/.config/nvim
 
-echo 'alias vim="nvim"' >> $HOME/.bashrc
-echo 'alias ll="ls -l"' >> $HOME/.bashrc
-echo 'alias la="ls -la"' >> $HOME/.bashrc
-echo 'alias l="ls"' >> $HOME/.bashrc
+rm -r $HOME/.local/scripts
+cp -r $dotfiles_dir/scripts $HOME/.local/scripts
 
-unlink $HOME/.local/scripts
-ln -s $dotfiles_dir/scripts $HOME/.local/scripts
-echo bind \'\"\\C-f\":\"$HOME/.local/scripts/tmux-sessionizer\\n\"\' >> $HOME/.bashrc
+bash_ext="$dotfiles_dir/bash_ext.sh"
+if ! grep -Fq $bash_ext $HOME/.bashrc ; then
+    echo "bash_ext.sh is not included in .bashrc. adding to .bashrc..."
+    echo ". \"$bash_ext\"" >> $HOME/.bashrc
+else
+    echo "bash_ext.sh is already included in .bashrc. skip..."
+fi
+
+echo "Done."
