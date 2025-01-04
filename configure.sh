@@ -16,6 +16,9 @@ cp -r $dotfiles_dir/ghostty $HOME/.config/ghostty
 rm -r $HOME/.local/scripts
 cp -r $dotfiles_dir/scripts $HOME/.local/scripts
 
+rm -r $HOME/.config/hypr
+cp -r $dotfiles_dir/hypr $HOME/.config/hypr
+
 bash_ext="$dotfiles_dir/bash_ext.sh"
 if ! grep -Fq $bash_ext $HOME/.bashrc ; then
     echo "bash_ext.sh is not included in .bashrc. adding to .bashrc..."
