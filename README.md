@@ -1,6 +1,15 @@
 # dotfiles
 Personal configs
 
+Install next packages:
+```
+ripgrep
+alacritty
+ghostty -- build yourself
+hyprland
+neovim
+```
+
 To install config run:
 ```
 ./configure.sh

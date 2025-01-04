@@ -10,6 +10,9 @@ cp $dotfiles_dir/tmux/.tmux.conf $HOME/.tmux.conf
 rm -fr $HOME/.config/nvim
 cp -r $dotfiles_dir/nvim $HOME/.config/nvim
 
+rm -fr $HOME/.config/ghostty
+cp -r $dotfiles_dir/ghostty $HOME/.config/ghostty
+
 rm -r $HOME/.local/scripts
 cp -r $dotfiles_dir/scripts $HOME/.local/scripts
 
