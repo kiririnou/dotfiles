@@ -1,0 +1,8 @@
+#!/bin/sh
+
+filename="$HOME/pasta.json"
+
+jq -r '.[] | .name' $filename | \
+fzf --height=80% --layout=reverse --border --margin=1 --padding=1 \
+--preview "jq -r '.[] | select(.name==\"{}\") | .data' $filename" | \
+{ read name; jq -r -j ".[] | select(.name==\"$name\") | .data" $filename; }
