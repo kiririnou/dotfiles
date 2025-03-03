@@ -8,6 +8,14 @@ alacritty
 ghostty -- build yourself
 hyprland
 neovim
+jq -- optional
+wl-clipboard
+sway-nc
+
+# for screenshots
+grim
+slurp
+satty
 ```
 
 To install config run:
