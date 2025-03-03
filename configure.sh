@@ -4,6 +4,16 @@
 
 dotfiles_dir=$(pwd)
 
+#create backups of old config
+datetime=$(date '+%Y%m%d-%H:%M:%S')
+
+mkdir backup_$datetime
+cp $HOME/.tmux.conf $dotfiles_dir/backup/.tmux.conf_$datetime.bak
+cp -r $HOME/.config/nvim $dotfiles_dir/backup/nvim_$datetime.bak
+cp -r $HOME/.config/ghostty $dotfiles_dir/backup/ghostty_$datetime.bak
+cp -r $HOME/.local/scripts $dotfiles_dir/backup/scripts_$datetime.bak
+cp -r $HOME/.config/hypr $dotfiles_dir/backup/hypr_$datetime.bak
+
 rm $HOME/.tmux.conf
 cp $dotfiles_dir/tmux/.tmux.conf $HOME/.tmux.conf
 
