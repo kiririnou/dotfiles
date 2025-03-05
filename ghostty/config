@@ -1,6 +1,7 @@
 window-decoration = true
 gtk-titlebar = false
-gtk-adwaita = false
+# current default build does not use libadwaita
+#gtk-adwaita = false
 term = xterm-256color
 
 window-height = 40
