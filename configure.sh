@@ -5,7 +5,7 @@
 dotfiles_dir=$(pwd)
 
 #create backups of old config
-datetime=$(date '+%Y%m%d-%H:%M:%S')
+datetime=$(date '+%Y%m%d-%H_%M_%S')
 
 mkdir backup_$datetime
 cp $HOME/.tmux.conf $dotfiles_dir/backup/.tmux.conf_$datetime.bak
