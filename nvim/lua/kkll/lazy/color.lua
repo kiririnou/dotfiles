@@ -1,10 +1,7 @@
-function SetColor()
-    -- TODO: make config function for different themes
-    -- e.g. everforest with darker bg, etc.
-    -- color = color or "rose-pine"
-    -- color = color or "everforest"
-    color = color or "cyberdream"
-    -- color = color or "fluoromachine"
+Color = "gruvbox-material"
+
+function SetColor(newColor)
+    local color = newColor or Color or "cyberdream"
     vim.cmd.colorscheme(color)
 
     --vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
@@ -17,8 +14,6 @@ return {
         name = "rose-pine",
         config = function()
             require("rose-pine").setup({})
-            -- vim.cmd("colorscheme rose-pine")
-            -- SetColor()
         end
     },
     {
@@ -30,7 +25,6 @@ return {
                 transparent_background = false,
                 nvim_tree_darker = true,
             })
-            --vim.cmd("colorscheme vscode_modern")
         end
     },
     {
@@ -49,7 +43,6 @@ return {
                 end,
             })
             -- everforest.load()
-            -- vim.cmd("colorscheme everforest")
         end
     },
     {
@@ -57,7 +50,6 @@ return {
         name = "cyberdream",
         config = function ()
             require("cyberdream").setup({})
-            -- SetColor()
         end
     },
     {
@@ -70,7 +62,6 @@ return {
                 theme = "delta",
                 transparent = false,
             }
-            -- SetColor()
         end
     },
     {
@@ -78,6 +69,13 @@ return {
         name = "gruvbox",
         config = function ()
             require("gruvbox").setup({})
+        end
+    },
+    {
+        "sainnhe/gruvbox-material",
+        name = "gruvbox-mat",
+        config = function ()
+            -- require("gruvbox-material").setup({})
             SetColor()
         end
     },
