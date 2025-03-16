@@ -52,16 +52,14 @@ return {
             -- vim.cmd("colorscheme everforest")
         end
     },
-
     {
         "scottmckendry/cyberdream.nvim",
         name = "cyberdream",
         config = function ()
             require("cyberdream").setup({})
-            SetColor()
+            -- SetColor()
         end
     },
-
     {
         "maxmx03/fluoromachine.nvim",
         name = "fluoromachine",
@@ -73,6 +71,14 @@ return {
                 transparent = false,
             }
             -- SetColor()
+        end
+    },
+    {
+        "ellisonleao/gruvbox.nvim",
+        name = "gruvbox",
+        config = function ()
+            require("gruvbox").setup({})
+            SetColor()
         end
     },
 }
