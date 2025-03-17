@@ -73,9 +73,11 @@ return {
     },
     {
         "sainnhe/gruvbox-material",
-        name = "gruvbox-mat",
+        name = "gruvbox-material",
         config = function ()
-            -- require("gruvbox-material").setup({})
+            vim.o.background = "dark"
+            vim.g.gruvbox_material_background = "medium"
+            vim.g.gruvbox_material_foreground = "mix"
             SetColor()
         end
     },
